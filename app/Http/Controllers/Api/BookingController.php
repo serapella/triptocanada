@@ -35,7 +35,8 @@ class BookingController extends Controller
             'name' => $validated['name'],
             'email' => $validated['email'],
             'number_of_people' => $validated['number_of_people'],
-            'status' => 'pending'
+            'status' => 'pending',
+            // 'token' => $expectedToken['token']
         ]);
 
         return response()->json($booking, 201);

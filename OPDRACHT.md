@@ -57,7 +57,7 @@ Een trip kan logischerwijze meerdere bookings hebben en een booking moet steeds 
 
 ---
 
-### 2. SEEDING & FACTORIES
+### 2. SEEDING & FACTORIES OK
 
 -   Gebruik factories om:
     -   **6 Trips** aan te maken (minstens 1 per regio's) die een toekomstige `start_date` hebben
@@ -107,7 +107,7 @@ Zorg ervoor dat het **exacte** commando `php artisan migrate:fresh --seed` werkt
 }
 ```
 
-**Meer info over deze request:**
+**Meer info over deze request:** OK
 
 | Parameter          | Vereisten                                     |
 | ------------------ | --------------------------------------------- |
@@ -119,11 +119,11 @@ Zorg ervoor dat het **exacte** commando `php artisan migrate:fresh --seed` werkt
 
 **Business logica:**
 
--   `status` wordt niet meegestuurd, deze is automatisch `pending`
--   Response: JSON met de aangemaakte booking (statuscode `201`)
--   Bij foutieve input: statuscode `422` met duidelijke foutboodschappen
--   Indien token `token` niet meegestuurd: statuscode `401` met duidelijke foutboodschap
--   Indien token `token` niet correct is: statuscode `403` met duidelijke foutboodschap
+-   `status` wordt niet meegestuurd, deze is automatisch `pending` OK
+-   Response: JSON met de aangemaakte booking (statuscode `201`) OK
+-   Bij foutieve input: statuscode `422` met duidelijke foutboodschappen OK
+-   Indien token `token` niet meegestuurd: statuscode `401` met duidelijke foutboodschap OK
+-   Indien token `token` niet correct is: statuscode `403` met duidelijke foutboodschap OK
 
 PS: voor de duidelijkheid: Voor de waarde van `token` moet je dus hetzelfde e-mailadres als je in dezelfde request doorstuurt, samenvoegen met de string "canadarocks" en daar de MD5 value van berekenen.
 
@@ -133,7 +133,7 @@ PS: voor de duidelijkheid: Voor de waarde van `token` moet je dus hetzelfde e-ma
 
 Toon een tabel van alle trips:
 
--   gesorteerd per datum, oplopend!
+-                                                                     gesorteerd per datum, oplopend!
 -   Per trip:
     -   Regio
     -   Titel

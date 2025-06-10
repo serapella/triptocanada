@@ -41,4 +41,10 @@ class BookingController extends Controller
 
         return response()->json($booking, 201);
     }
+
+    public function index(): JsonResponse
+    {
+        $bookings = Booking::all();
+        return response()->json($bookings);
+    }
 }

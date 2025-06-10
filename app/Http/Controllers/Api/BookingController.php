@@ -13,12 +13,10 @@ class BookingController extends Controller
 {
     public function store(Request $request): JsonResponse
     {
-        // Validate required token
         if (!$request->has('token')) {
             return response()->json(['error' => 'Token is required'], 401);
         }
 
-        // Validate input
         $validated = $request->validate([
             'trip_id' => 'required|exists:trips,id',
             'name' => 'required|string',
@@ -27,13 +25,11 @@ class BookingController extends Controller
             'token' => 'required|string'
         ]);
 
-        // Verify token
         $expectedToken = md5($validated['email'] . 'canadarocks');
         if ($validated['token'] !== $expectedToken) {
             return response()->json(['error' => 'Invalid token'], 403);
         }
 
-        // Create booking
         $booking = Booking::create([
             'trip_id' => $validated['trip_id'],
             'name' => $validated['name'],

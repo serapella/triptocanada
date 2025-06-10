@@ -51,7 +51,7 @@ Gebruik **exact** deze modelnamen en velden:
 `number_of_people` : verplicht, min. 1
 `status` : waarden: `pending` (standaard), `confirmed`, `cancelled`
 
-**Relaties:**
+**Relaties:** OK
 
 Een trip kan logischerwijze meerdere bookings hebben en een booking moet steeds een geldige trip_id hebben.
 
